@@ -33,10 +33,10 @@ public:
             root->isTerminal = true;
             return;
         }
-        //  assume word has Capital letters
-        int index = word[0] - 'A';
+        //  assume word has Small letters
+        int index = word[0] - 'a';
 
-        TrieNode *child;
+        TrieNode *child;  
         // present
         if (root->children[index] != NULL)
         {
@@ -53,7 +53,7 @@ public:
     }
     void insertWord(string word)
     {
-        transform(word.begin(), word.end(), word.begin(), ::toupper);
+       
         insertUtil(root, word);
     }
 
@@ -63,7 +63,7 @@ public:
         {
             return root->isTerminal;
         }
-        int index = word[0] - 'A';
+        int index = word[0] - 'a';
         TrieNode *child;
         if (root->children[index] != NULL)
         {
@@ -77,7 +77,6 @@ public:
     }
     bool search(string word)
     {
-        transform(word.begin(), word.end(), word.begin(), ::toupper);
         return searchUtil(root, word);
     }
 
@@ -150,5 +149,5 @@ int main()
 
     cout << "present or not : " << t->search("joke") << endl;
     t->deleteWord("joker");
-    cout << "present or not : " << t->search("joker") << endl;
+    cout << "present or not : " << t->search("joke") << endl;
 }

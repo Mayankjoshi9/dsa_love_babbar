@@ -1,0 +1,2 @@
+Efficiency: Passing large data structures like vectors by reference can be more
+ efficient since it avoids the overhead of copying the entire data structure.
