@@ -48,7 +48,7 @@ Node* deleteNode(Node* &root,int val){
         if(root->left==NULL && root->right==NULL){
             delete root;
             return NULL;
-        }
+        } 
         // 1 child
         if(root->left!=NULL && root->right==NULL){
             Node* temp=root->left;

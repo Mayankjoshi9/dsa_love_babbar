@@ -1,0 +1,3 @@
+condition for dp
+1. bigger problem solution achieve by  smalller sub problem
+2. overlapping sub problem

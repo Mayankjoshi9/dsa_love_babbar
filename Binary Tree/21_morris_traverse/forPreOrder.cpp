@@ -44,7 +44,7 @@ void morris_traverse(Node* root){
         if(curr->left==NULL){
             cout<<curr->data<<" ";
             curr=curr->right;
-            
+              
         }
         else{
             
