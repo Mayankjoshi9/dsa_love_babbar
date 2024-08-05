@@ -16,7 +16,7 @@ using namespace std;
             swap(arr[i],arr[smallest]);
             heapify(arr,r,smallest);
         }
-    }
+}
     int kthSmallest(int arr[], int l, int r, int k) {
         for(int i=(r-1)/2;i>=0;i--){
             heapify(arr,r,i);
